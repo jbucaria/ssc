@@ -5,7 +5,7 @@ export const Colors = {
     accent: '#D4AF37',
     icon: '#666666',
     backgroundSecondary: '#F3F3F3',
-    card: '#FFFFFF',
+    card: '#F8F8F8',
     gold: '#D4AF37',
   },
   dark: {
