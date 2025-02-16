@@ -1,16 +1,20 @@
-// This file is a fallback for using MaterialIcons on Android and web.
-
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 import React from 'react'
 
-// Add your SFSymbol to MaterialIcons mappings here.
 const MAPPING = {
-  // See MaterialIcons here: https://icons.expo.fyi
-  // See SF Symbols in the SF Symbols app on Mac.
   'house.fill': 'home',
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  // Additional icons:
+  previous: 'skip-previous',
+  play: 'play-arrow',
+  pause: 'pause',
+  next: 'skip-next',
+  volume: 'volume-up',
+  'gearshape.fill': 'settings',
+  calendar: 'calendar-today',
+  reset: 'replay',
 }
 
 export function IconSymbol({ name, size = 24, color, style, weight }) {

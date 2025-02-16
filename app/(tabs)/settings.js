@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import * as Haptics from 'expo-haptics'
 import { ThemedText } from '@/components/ThemeComponent'
 import { useThemeStore } from '@/stores/themeStore'
 import { Colors } from '@/constants/Colors'
@@ -55,7 +56,10 @@ export default function SettingsScreen() {
         <View style={styles.optionsContainer}>
           <TouchableOpacity
             style={getButtonStyle('auto')}
-            onPress={() => setThemeMode('auto')}
+            onPress={() => {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)
+              setThemeMode('auto')
+            }}
           >
             <ThemedText type="defaultSemiBold" style={getTextStyle('auto')}>
               Auto
@@ -63,7 +67,10 @@ export default function SettingsScreen() {
           </TouchableOpacity>
           <TouchableOpacity
             style={getButtonStyle('dark')}
-            onPress={() => setThemeMode('dark')}
+            onPress={() => {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)
+              setThemeMode('dark')
+            }}
           >
             <ThemedText type="defaultSemiBold" style={getTextStyle('dark')}>
               Dark
@@ -71,7 +78,10 @@ export default function SettingsScreen() {
           </TouchableOpacity>
           <TouchableOpacity
             style={getButtonStyle('light')}
-            onPress={() => setThemeMode('light')}
+            onPress={() => {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)
+              setThemeMode('light')
+            }}
           >
             <ThemedText type="defaultSemiBold" style={getTextStyle('light')}>
               Light
